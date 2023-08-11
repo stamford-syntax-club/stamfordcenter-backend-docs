@@ -1,0 +1,61 @@
+---
+title: GET get_file
+---
+
+# `GET` get_file
+
+Use this endpoint to retrieve a file from the S3 server.
+
+## Endpoint URL
+
+GET /get_file
+
+## Query Parameters
+
+### `download` (optional)
+
+A boolean parameter that determines whether the file should be downloaded. If set to `true`, the file will be downloaded. If `false` or omitted, the file will not be downloaded.
+
+-   Type: `boolean`
+-   Default: `false`
+
+## Example Request
+
+### Get file without downloading
+
+````http
+GET /get_file
+
+
+### Get file and download
+
+```http
+GET /get_file?download=true
+````
+
+## Response
+
+The response will contain the requested file.
+
+### Success Response Example
+
+```json
+{
+	"status": "success",
+	"file_url": "https://s3-server.com/path/to/your/file"
+}
+```
+
+### Error Response Example
+
+```json
+{
+	"status": "error",
+	"message": "File not found"
+}
+```
+
+## Notes
+
+-   Ensure you have the required permissions to access the file.
+-   If the `download` parameter is set to `true`, ensure that your client handles the download properly.
