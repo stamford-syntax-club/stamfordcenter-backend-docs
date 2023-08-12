@@ -1,0 +1,48 @@
+---
+title: GET study_plans
+---
+
+# `GET` study_plans
+
+Retrieves all study plans stored in our system.
+
+## Endpoint URL
+
+GET /study_plans
+
+## Example Request
+
+### Get all study plans
+
+```http
+GET /study_plans
+```
+
+## Response
+
+The response will be a json array of objects.
+
+### Success Response Example
+
+```json
+[
+	{
+		"fileKey": "2022_ent_bil.pdf",
+		"major": "Entrepreneurship",
+		"major_abbrv": "ENT",
+		"faculty": "Business and Technology",
+		"language": "Bilingual",
+		"year": "2022"
+	}
+	// ...
+]
+```
+
+### Error Response Example
+
+```json
+{
+	"status": "error",
+	"message": "Some error message"
+}
+```

@@ -1,14 +1,14 @@
 ---
-title: GET get_file
+title: GET get_files
 ---
 
-# `GET` get_file
+# `GET` get_files
 
 Use this endpoint to retrieve a file from the S3 server.
 
 ## Endpoint URL
 
-GET /get_file
+GET /get_files
 
 ## Query Parameters
 
@@ -23,15 +23,15 @@ A boolean parameter that determines whether the file should be downloaded. If se
 
 ### Get file without downloading
 
-````http
-GET /get_file
-
+```http
+GET /get_files
+```
 
 ### Get file and download
 
 ```http
-GET /get_file?download=true
-````
+GET /get_files?download=true
+```
 
 ## Response
 
